@@ -19,8 +19,8 @@ desc "Generate deb file for the gem and command-line tools"
 task :package do
   sh "mkdir -p build"
   sh "if [ -f *.gem ]; then rm *.gem; fi"
-  sh "gem build nagios-support.gemspec && mv nagios-support*.gem build/"
-  sh "cd build && fpm -s gem -t deb -n nagios-support nagios-support-*.gem"
+  sh "gem build nagios-support.gemspec && mv *.gem build/"
+  sh "cd build && fpm -s gem -t deb -n rubygem-nagios-support *.gem"
 end
 
 desc "Clean everything up"
