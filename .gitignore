@@ -2,4 +2,3 @@
 ruby-mongostat-graphite.iml
 build
 *.deb
-vendor
